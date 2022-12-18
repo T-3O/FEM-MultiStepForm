@@ -1,0 +1,15 @@
+*.sketch
+*.fig
+*.xd
+assets/
+design/
+node_modules/
+scss/
+
+package-lock.json
+package.json
+style-guide.md
+README-template.md
+
+.DS_Store
+.prettierignore

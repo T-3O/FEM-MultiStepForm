@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://fonts.bunny.net/css?family=epilogue:400|ubuntu:400,500,700" rel="stylesheet" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+  <title>Frontend Mentor | Multi-step form</title>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li>
+        <span class="step-number current">1</span>
+        <div class="desktop step">
+          <div class="step-title">Step 1</div>
+          <div class="step-description">Your info</div>
+        </div>
+      </li>
+      <li>
+        <span class="step-number">2</span>
+        <div class="desktop step">
+          <div class="step-title">Step 2</div>
+          <div class="step-description">Your info</div>
+        </div>
+      </li>
+      <li>
+        <span class="step-number">3</span>
+        <div class="desktop step">
+          <div class="step-title">Step 3</div>
+          <div class="step-description">Your info</div>
+        </div>
+      </li>
+      <li>
+        <span class="step-number">4</span>
+        <div class="desktop step">
+          <div class="step-title">Step 4</div>
+          <div class="step-description">Your info</div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <h1 class="heading-1">Personal info</h1>
+    <p>
+      Plase provide your name, email, adddress, and phone number.
+    </p>
+    <form class="form">
+      <div class="form-input-cell">
+        <label for="customerName">Name</label>
+        <input class="form-input" type="text" id="customerName">
+      </div>
+      <div class="form-input-cell">
+        <label for="customerEmail">Email address</label>
+        <input class="form-input" type="text" id="customerEmail">
+      </div>
+      <div class="form-input-cell">
+        <label for="customerPhone">Phone number</label>
+        <input class="form-input" type="text" id="customerPhone">
+      </div>
+    </form>
+  </main>
+  <footer>
+    <button>Go back</button>
+    <button class="main">Next step</button>
+  </footer>
+</body>
+</html>
