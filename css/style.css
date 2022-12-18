@@ -119,11 +119,36 @@ ul, ul li {
 body {
   font-family: var(--ff-body);
   font-size: var(--fs-400);
+  font-weight: var(--fw-regular);
   line-height: 1.5;
   background: var(--clr-neutral-700);
   color: var(--clr-neutral-500);
   display: grid;
   grid-template-rows: min-content auto min-content;
+}
+body[data-step="1"] section[data-step="1"] {
+  display: flex;
+}
+body[data-step="1"] footer {
+  justify-content: flex-end;
+}
+body[data-step="1"] button[data-role=back] {
+  display: none;
+}
+body[data-step="2"] section[data-step="2"] {
+  display: flex;
+}
+body[data-step="3"] section[data-step="3"] {
+  display: flex;
+}
+body[data-step="4"] section[data-step="4"] {
+  display: flex;
+}
+body[data-step="4"] button[data-role=next] {
+  display: none;
+}
+body[data-step="4"] button[data-role=confirm] {
+  display: block;
 }
 
 nav {
@@ -169,10 +194,13 @@ main {
   border-radius: var(--radius-800);
   padding: var(--gap-600) var(--gap-500);
   overflow-y: auto;
-  display: flex;
+  box-shadow: 0 1em 1em -1em var(--clr-neutral-500);
+}
+
+section {
+  display: none;
   flex-flow: column;
   gap: var(--gap-400);
-  box-shadow: 0 0.2em 1em var(--clr-neutral-500);
 }
 
 footer {
@@ -196,6 +224,11 @@ button.main {
   background: var(--clr-primary-200);
   padding: var(--gap-200) var(--gap-400);
   color: var(--clr-neutral-700);
+}
+
+button[data-role=confirm] {
+  display: none;
+  background: var(--clr-primary-400);
 }
 
 button:hover,
@@ -243,6 +276,7 @@ button:focus-within {
 .form-input:focus-within {
   border-color: var(--clr-primary-400);
   outline-color: var(--clr-primary-400);
+  outline-width: 2px;
 }
 
 .form-input.error {

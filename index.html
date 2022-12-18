@@ -8,9 +8,10 @@
   <link rel="stylesheet" href="./css/style.css">
   <link href="https://fonts.bunny.net/css?family=epilogue:400|ubuntu:400,500,700" rel="stylesheet" />
   <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+  <script src="./js/Form.js"></script>
   <title>Frontend Mentor | Multi-step form</title>
 </head>
-<body>
+<body data-step="1">
   <nav>
     <ul>
       <li>
@@ -44,28 +45,58 @@
     </ul>
   </nav>
   <main>
-    <h1 class="heading-1">Personal info</h1>
-    <p>
-      Plase provide your name, email, adddress, and phone number.
-    </p>
-    <form class="form">
-      <div class="form-input-cell">
-        <label for="customerName">Name</label>
-        <input class="form-input" type="text" id="customerName">
-      </div>
-      <div class="form-input-cell">
-        <label for="customerEmail">Email address</label>
-        <input class="form-input" type="text" id="customerEmail">
-      </div>
-      <div class="form-input-cell">
-        <label for="customerPhone">Phone number</label>
-        <input class="form-input" type="text" id="customerPhone">
-      </div>
-    </form>
+    
+    <section data-step="1">
+      <h1 class="heading-1">Personal info</h1>
+      <p>
+        Plase provide your name, email, adddress, and phone number.
+      </p>
+      <form class="form">
+        <div class="form-input-cell">
+          <label for="customerName">Name</label>
+          <input class="form-input" type="text" id="customerName">
+        </div>
+        <div class="form-input-cell">
+          <label for="customerEmail">Email address</label>
+          <input class="form-input" type="email" id="customerEmail">
+        </div>
+        <div class="form-input-cell">
+          <label for="customerPhone">Phone number</label>
+          <input class="form-input" type="text" id="customerPhone">
+        </div>
+      </form>
+    </section>
+
+    <section data-step="2">
+      <h1 class="heading-1">Select your plan</h1>
+      <p>
+        You have the option of monthly or yearly billing.
+      </p>
+    </section>
+
+    <section data-step="3">
+      <h1 class="heading-1">Pick add-ons</h1>
+      <p>
+        Add-ons help enhance your gaming experience.
+      </p>
+    </section>
+
+    <section data-step="4">
+      <h1 class="heading-1">Finishing up</h1>
+      <p>
+        Double-check everything looks OK before confirming.
+      </p>
+    </section>
+
   </main>
   <footer>
-    <button>Go back</button>
-    <button class="main">Next step</button>
+    <button data-role="back">Go back</button>
+    <button class="main" data-role="next">Next step</button>
+    <button class="main" data-role="confirm">Confirm</button>
   </footer>
+
+  <script>
+    new Form();
+  </script>
 </body>
 </html>
